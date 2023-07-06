@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- tree view  -->
+    <record id="realestate_list_view" model="ir.ui.view">
+        <field name="name">realestate.list.view</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="description" />
+                <field name="postcode" />
+                <field name="date_availability" />
+                <field name="expected_price" />
+                <field name="selling_price" />
+                <field name="bedrooms" />
+                <field name="living_area" />
+                <field name="facades" />
+                <field name="garage" />
+                <field name="garden" />
+                <field name="garden_area" />
+                <field name="orientation" />
+                <field name="buyer_id" />
+                <field name="salesperson_id" />
+                <field name="tags_id" widget="many2many_tags" />
+            </tree>
+
+        </field>
+    </record>
+
+    <!-- graph view  -->
+    <record id="realestate_graph_view" model="ir.ui.view">
+        <field name="name">realestate.graph.view</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="name" />
+                <field name="description" />
+                <field name="postcode" />
+                <field name="date_availability" />
+                <field name="expected_price" />
+                <field name="selling_price" />
+                <field name="bedrooms" />
+                <field name="living_area" />
+                <field name="facades" />
+                <field name="garage" />
+                <field name="garden" />
+                <field name="garden_area" />
+                <field name="orientation" />
+                <field name="buyer_id" />
+                <field name="salesperson_id" />
+                <field name="tags_id" widget="many2many_tags" />
+            </graph>
+        </field>
+    </record>
+
+    <!-- Search view  -->
+    <record id="realestate_search_view" model="ir.ui.view">
+        <field name="name">realestate.search.view</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <search string="Search Here">
+                <field name="name" />
+                <field name="description" />
+                <field name="postcode" />
+                <field name="date_availability" />
+                <field name="expected_price" />
+                <field name="selling_price" />
+                <field name="bedrooms" />
+                <field name="living_area" />
+                <field name="facades" />
+                <field name="garage" />
+                <field name="garden" />
+                <field name="garden_area" />
+                <field name="orientation" />
+                <field name="buyer_id" />
+                <field name="salesperson_id" />
+                <field name="tags_id" widget="many2many_tags" />
+                <field name="offer_id" />
+            </search>
+        </field>
+    </record>
+
+    <!-- Form view  -->
+    <record id="realestate_form_view" model="ir.ui.view">
+        <field name="name">realestate.form.view</field>
+        <field name="model">estate.property</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="postcode" />
+                        </group>
+                        <group>
+                            <field name="date_availability" />
+                            <field name="expected_price" />
+                            <field name="best_price" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <group>
+                                <group>
+                                    <field name="selling_price" />
+                                    <field name="bedrooms" />
+                                    <field name="living_area" />
+                                    <field name="facades" />
+                                    <field name="garage" />
+                                    <field name="garden" />
+                                    <field name="garden_area" />
+                                    <field name="orientation" />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Others">
+                            <group>
+                                <field name="buyer_id" />
+                                <field name="salesperson_id" />
+                                <field name="tags_id" widget="many2many_tags" />
+                            </group>
+                        </page>
+                        <page string="Goal">
+                            <group>
+                                <field name="offer_id" />
+                                <field name="total_area" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_realestate_profile" model="ir.actions.act_window">
+        <field name="name">Real Estate Profile</field>
+        <field name="res_model">estate.property</field>
+        <field name="view_mode">tree,graph,search,form</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>   
+
+    <record id="action_propertytag_profile" model="ir.actions.act_window">
+        <field name="name">Property List</field>
+        <field name="res_model">estate.property.tag</field> 
+    </record>
+
+</odoo>

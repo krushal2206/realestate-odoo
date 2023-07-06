@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem 
+        id="realestate_root_menu" 
+        name="Real Estate"/>
+
+    <menuitem 
+        id="realestate_sub_menu" 
+        name="Real Profile" 
+        action="action_realestate_profile" 
+        parent="realestate_root_menu"/> 
+
+    <menuitem 
+        id="realestate_property_menu" 
+        name="Property" 
+        action="action_property_profile" 
+        parent="realestate_root_menu"/>
+
+    <menuitem 
+        id="realestate_propertytag_menu" 
+        name="Property Tag" 
+        action="action_propertytag_profile" 
+        parent="realestate_property_menu"/> 
+
+    <!-- <menuitem 
+        id="realestate_profile_menu" 
+        name="Profile" 
+        action="action_realestate_profile" 
+        parent="realestate_sub_menu"/> -->
+</odoo>

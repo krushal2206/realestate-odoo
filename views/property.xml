@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- tree view  -->
+    <record id="property_list_view" model="ir.ui.view">
+        <field name="name">property.list.view</field>
+        <field name="model">property.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+            
+        </field>
+    </record>
+
+    <!-- Form view  -->
+    <record id="property_form_view" model="ir.ui.view">
+        <field name="name">property.form.view</field>
+        <field name="model">property.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <record id="action_property_profile" model="ir.actions.act_window">
+        <field name="name">Property List</field>
+        <field name="res_model">property.type</field>
+        <field name="view_mode">tree,graph,search,form</field> 
+    </record>
+</odoo>
